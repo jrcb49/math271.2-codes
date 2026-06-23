@@ -1,7 +1,6 @@
 # Time-series library
 library(TSA)
 library(tseries)
-library(itsmr)
 library(forecast)
 library(astsa)
 
@@ -39,6 +38,7 @@ jarque.bera.test(residuals(arma21))
 
 # annual number of USA union strikes, 1951-1980
 # perform initial tests and transformations
+strikes = read.csv("strikes.csv")
 strikes.l = log(ts(strikes))
 strikes.l.d = diff(strikes.l)
 strikes.l.d2 = diff(strikes.l.d)
