@@ -44,9 +44,9 @@ acf(ma1.1.s)
 acf(z)
 
 # compute for PACF
-acf(ar2.s, type="partial")
-acf(ma1.1.s, type="partial")
-acf(z, type="partial")
+pacf(ar2.s)
+pacf(ma1.1.s)
+pacf(z)
 
 # fit ARMA models
 # order = AR lag, integration, MA lag 
@@ -89,7 +89,7 @@ Box.test(forex, type="Ljung")
 
 # check ACF, PACF
 acf(forex)
-acf(forex, type="partial")
+pacf(forex)
 
 # check models, lower AIC is better
 arima(forex, order=c(0,0,1)) # test MA(1)

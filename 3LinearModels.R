@@ -14,7 +14,7 @@ Box.test(forex, type="Ljung")
 
 # check ACF, PACF
 acf(forex)
-acf(forex, type="partial")
+pacf(forex)
 
 # from previous result, use ARMA(2,1)
 arma21 = arima(forex, order=c(2,0,1))
